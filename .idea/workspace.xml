@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="635dc71e-e3d5-4353-b8a1-20b39073f976" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/Initialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/TileState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/flag_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/google_sans.otf" afterDir="false" />
+    <list default="true" id="635dc71e-e3d5-4353-b8a1-20b39073f976" name="Changes" comment="Fix errors">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dumb12344/Initialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/Initialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dumb12344/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dumb12344/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +57,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 3
@@ -80,10 +71,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build javasweeper.executor": "Run",
     "Gradle.javasweeper [run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RunManager">
@@ -127,5 +120,10 @@
       <updated>1790093618934</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Fix errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix errors" />
   </component>
 </project>

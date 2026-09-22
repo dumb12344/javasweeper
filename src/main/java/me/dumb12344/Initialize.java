@@ -28,6 +28,7 @@ public class Initialize {
             }
         }
     }
+
     private static void initializeMines () {
         initializeMines(0, 0);
     }

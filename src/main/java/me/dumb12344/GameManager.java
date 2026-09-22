@@ -2,8 +2,6 @@ package me.dumb12344;
 
 import java.util.function.BiConsumer;
 
-import static me.dumb12344.GameData.SIZE_X;
-import static me.dumb12344.GameData.SIZE_Y;
 import static me.dumb12344.GameData.gameState;
 import static me.dumb12344.GameData.remainingTiles;
 import static me.dumb12344.GameData.tiles;

@@ -6,7 +6,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.function.BiConsumer;
 
 import static me.dumb12344.GameData.TILE_SIZE;
 import static me.dumb12344.GameData.gameState;
@@ -15,15 +14,10 @@ import static me.dumb12344.GameData.tiles;
 import static me.dumb12344.GameManager.forEachTile;
 
 public class GameScreen extends JPanel {
-    int width;
-    int height;
     Font google_sans;
     Image flag_icon;
 
-    public GameScreen (int width, int height) {
-        this.width = width;
-        this.height = height;
-
+    public GameScreen () {
         this.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed (MouseEvent event) {
@@ -66,14 +60,7 @@ public class GameScreen extends JPanel {
         }
     }
 
-    public KeyListener keyListener;
-
-//    void drawStringCentered (String string, int x, int y, Graphics graphics, float font_size) {
-//        FontMetrics metrics = graphics.getFontMetrics(google_sans.deriveFont(font_size));
-//        int newX = x - (metrics.stringWidth(string)) / 2;
-//        int newY = y + (metrics.getHeight()) / 4;
-//        graphics.drawString(string, newX, newY);
-//    }
+    public final KeyListener keyListener;
 
     // https://stackoverflow.com/questions/27706197/how-can-i-center-graphics-drawstring-in-java
     public static void drawStringCentered(String text, Rectangle rect, Graphics g, Font font) {

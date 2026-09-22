@@ -3,10 +3,10 @@ package me.dumb12344;
 import javax.swing.*;
 
 public class Main {
-    public static JFrame frame = new JFrame("Javasweeper");
+    public static final JFrame frame = new JFrame("Javasweeper");
     static void main () {
         Initialize.init();
-        GameScreen screen = new GameScreen(1920, 1080);
+        GameScreen screen = new GameScreen();
         screen.setBorder(null);
         frame.add(screen);
         frame.pack();
