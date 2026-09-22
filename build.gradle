@@ -1,0 +1,13 @@
+plugins {
+    id 'application'
+}
+
+group = "me.dumb1234"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+application {
+    mainClass = "me.dumb12344.Main"
+}
