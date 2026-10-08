@@ -17,6 +17,9 @@ public class GameScreen extends JPanel {
     Font google_sans;
     Image flag_icon;
 
+    int mouseX = 0, mouseY = 0;
+    boolean mouseInBounds = false;
+
     public GameScreen () {
         this.addMouseListener(new MouseAdapter() {
             @Override
@@ -32,6 +35,23 @@ public class GameScreen extends JPanel {
                     GameManager.flagTile(tileX, tileY);
                     paintComponent(getGraphics());
                 }
+            }
+        });
+
+        this.addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseMoved(MouseEvent event) {
+                int tileX = (int) Math.floor((double) event.getX() / TILE_SIZE);
+                int tileY = (int) Math.floor((double) event.getY() / TILE_SIZE);
+                mouseInBounds = !outOfBounds(tileX, tileY);
+                mouseX = tileX;
+                mouseY = tileY;
+                paintComponent(getGraphics());
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent event) {
+                mouseMoved(event);
             }
         });
 
@@ -60,6 +80,10 @@ public class GameScreen extends JPanel {
         }
     }
 
+    public void setTileSize(Dimension d) {
+        GameData.TILE_SIZE = (int) Math.floor(Math.min(d.getWidth() / GameData.SIZE_X, d.getHeight() / GameData.SIZE_Y));
+    }
+
     public final KeyListener keyListener;
 
     // https://stackoverflow.com/questions/27706197/how-can-i-center-graphics-drawstring-in-java
@@ -75,8 +99,10 @@ public class GameScreen extends JPanel {
     protected void paintComponent (Graphics graphics) {
         super.paintComponent(graphics);
         drawRevealed(graphics);
+        if (mouseInBounds) drawHighlight(graphics, false);
         drawOutline(graphics);
         drawUnrevealed(graphics);
+        if (mouseInBounds) drawHighlight(graphics, true);
         drawExtras(graphics);
     }
 
@@ -135,5 +161,11 @@ public class GameScreen extends JPanel {
             graphics.setColor(Color.decode("#885500"));
             drawStringCentered("You win!", new Rectangle(0, 0, getWidth(), getHeight()), graphics, font);
         }
+    }
+
+    public void drawHighlight(Graphics graphics, boolean index) {
+        graphics.setColor(new Color(0xff, 0xff, 0xff, 0x33));
+        TileState tile = GameData.tiles[mouseX][mouseY];
+        if (tile.isRevealed() != index && (tile.getSurroundingMines() > 0 || !tile.isRevealed())) graphics.fillRect(mouseX * TILE_SIZE, mouseY * TILE_SIZE, TILE_SIZE, TILE_SIZE);
     }
 }

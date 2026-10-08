@@ -8,7 +8,7 @@ public class GameData {
     public static final int SIZE_X = 10;
     public static final int SIZE_Y = 8;
     public static final int MINE_COUNT = 10;
-    public static final int TILE_SIZE = 100;
+    public static int TILE_SIZE = 100;
     public static int remainingTiles;
     public static GameState gameState = GameState.Initializing;
     public static TileState[][] tiles = {{}};
